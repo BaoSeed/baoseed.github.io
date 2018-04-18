@@ -499,12 +499,14 @@
           
             <p>最近因为业务需要，被公司要求做安卓，在一个老项目上改，天啊，一窍不通…</p>
 <p>这几天都是和 Android Studio 博弈，各种错，各种搜，眼睛都快瞎了。</p>
-<p>这不今天手残点了升级，又被困了半天，搜了一下发现是 outputFileName 路径问题，升级了不支持绝对路径！！</p>
+<h2 id="outputFileName"><a href="#outputFileName" class="headerlink" title="outputFileName"></a>outputFileName</h2><p>这不今天手残点了升级，又被困了半天，搜了一下发现是 outputFileName 路径问题，升级了不支持绝对路径！！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Absolute path are not supported when setting an output file name</span><br></pre></td></tr></table></figure>
 <p>以前代码是这样的，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outputFileName = new File(outputFile.parent, fileName)</span><br></pre></td></tr></table></figure>
 <p>去掉绝对路径，直接定义你的包名，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outputFileName=&quot; $&#123;variant.applicationId&#125;- $&#123; buildType.name&#125;- $&#123;defaultConfig.versionName&#125;-$&#123; defaultConfig.versionCode &#125;-$&#123;releaseTime() &#125;.apk&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="Execution-failed-for-task-‘-app-transformClassesWithInstantRunForDebug’"><a href="#Execution-failed-for-task-‘-app-transformClassesWithInstantRunForDebug’" class="headerlink" title="Execution failed for task ‘:app:transformClassesWithInstantRunForDebug’"></a>Execution failed for task ‘:app:transformClassesWithInstantRunForDebug’</h2><p>Preferences-&gt;Built,Execution,Deployment-&gt;Instant Run</p>
+<p>取消勾选 <strong>Enable Instant Run to hot swap code/resource changes on deploy(default enabled)</strong></p>
 <p>目前没有系统的去学安卓，只能边做边学了，在这里记录一下。</p>
 
           
