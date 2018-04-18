@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="爆seed的小仓库">
 <meta property="og:description" content="最近因为业务需要，被公司要求做安卓，在一个老项目上改，天啊，一窍不通… 这几天都是和 Android Studio 博弈，各种错，各种搜，眼睛都快瞎了。 outputFileName这不今天手残点了升级，又被困了半天， 1Absolute path are not supported when setting an output file name 搜了一下发现是 outputFileName 路">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-18T02:45:39.572Z">
+<meta property="og:updated_time" content="2018-04-18T02:48:01.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="升级 Android Studio 3.1.1 出现的问题">
 <meta name="twitter:description" content="最近因为业务需要，被公司要求做安卓，在一个老项目上改，天啊，一窍不通… 这几天都是和 Android Studio 博弈，各种错，各种搜，眼睛都快瞎了。 outputFileName这不今天手残点了升级，又被困了半天， 1Absolute path are not supported when setting an output file name 搜了一下发现是 outputFileName 路">
@@ -362,8 +362,10 @@
 <p>去掉绝对路径，直接定义你的包名，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outputFileName=&quot; $&#123;variant.applicationId&#125;- $&#123; buildType.name&#125;- $&#123;defaultConfig.versionName&#125;-$&#123; defaultConfig.versionCode &#125;-$&#123;releaseTime() &#125;.apk&quot;</span><br></pre></td></tr></table></figure>
 <h2 id="Execution-failed-for-task-“-app-transformClassesWithInstantRunForDebug”"><a href="#Execution-failed-for-task-“-app-transformClassesWithInstantRunForDebug”" class="headerlink" title="Execution failed for task “:app:transformClassesWithInstantRunForDebug”"></a>Execution failed for task “:app:transformClassesWithInstantRunForDebug”</h2><p>Preferences-&gt;Built,Execution,Deployment-&gt;Instant Run</p>
-<p>取消勾选 <strong>Enable Instant Run to hot swap code/resource changes on deploy(default enabled)</strong></p>
-<p>目前没有系统的去学安卓，只能边做边学了，在这里记录一下。</p>
+<p>取消勾选 </p>
+<p><strong>Enable Instant Run to hot swap code/resource changes on deploy(default enabled)</strong></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>目前没有系统的去学安卓，只能边做边学了，在这里记录一下。</p>
+<p>每次升级还是会有很多问题的，只能慢慢摸索。</p>
 
       
     </div>
@@ -538,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#outputFileName"><span class="nav-number">1.</span> <span class="nav-text">outputFileName</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Execution-failed-for-task-“-app-transformClassesWithInstantRunForDebug”"><span class="nav-number">2.</span> <span class="nav-text">Execution failed for task “:app:transformClassesWithInstantRunForDebug”</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#outputFileName"><span class="nav-number">1.</span> <span class="nav-text">outputFileName</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Execution-failed-for-task-“-app-transformClassesWithInstantRunForDebug”"><span class="nav-number">2.</span> <span class="nav-text">Execution failed for task “:app:transformClassesWithInstantRunForDebug”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
