@@ -497,7 +497,8 @@
       
         
           
-            <p>最近因为业务需要，被公司要求做安卓，在一个老项目上改，天啊，一窍不通…</p>
+            <p>[toc]</p>
+<p>最近因为业务需要，被公司要求做安卓，在一个老项目上改，天啊，一窍不通…</p>
 <p>这几天都是和 Android Studio 博弈，各种错，各种搜，眼睛都快瞎了。</p>
 <h2 id="outputFileName"><a href="#outputFileName" class="headerlink" title="outputFileName"></a>outputFileName</h2><p>这不今天手残点了升级，又被困了半天，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Absolute path are not supported when setting an output file name</span><br></pre></td></tr></table></figure>
@@ -510,8 +511,32 @@
 <p>取消勾选 </p>
 <p><strong>Enable Instant Run to hot swap code/resource changes on deploy(default enabled)</strong></p>
 <p>关于 Instant Run 可以参考<a href="https://blog.csdn.net/guolin_blog/article/details/51271369" target="_blank" rel="noopener">这篇文章</a>。</p>
+<h2 id="android-enableAapt2"><a href="#android-enableAapt2" class="headerlink" title="android.enableAapt2"></a>android.enableAapt2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The option &apos;android.enableAapt2&apos; is deprecated and should not be used anymore.</span><br><span class="line">Use &apos;android.enableAapt2=true&apos; to remove this warning.</span><br><span class="line">It will be removed at the end of 2018</span><br></pre></td></tr></table></figure>
+<p>去掉 gradle.properties 中的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android.enableAapt2=false</span><br></pre></td></tr></table></figure>
+<p>但是打包又会报错，uncompiled PNG file。</p>
+<h2 id="uncompiled-PNG-file-passed-as-argument"><a href="#uncompiled-PNG-file-passed-as-argument" class="headerlink" title="uncompiled PNG file passed as argument"></a>uncompiled PNG file passed as argument</h2><p>报错：</p>
+<blockquote>
+<p>/Users/Ivan/Desktop/zixun/android/app/build/intermediates/res/merged/release/drawable-xhdpi/app_view_imgs_financial_name.png: error: uncompiled PNG file passed as argument. Must be compiled first into .flat file..<br>error: failed parsing overlays.</p>
+</blockquote>
+<blockquote>
+<p>Task :app:processReleaseResources FAILED<br>FAILURE: Build failed with an exception.</p>
+</blockquote>
+<p>github上的issue:</p>
+<blockquote>
+<p>This is what I discovered:</p>
+</blockquote>
+<blockquote>
+<p>Only happens for release builds.<br>This issues seems to stem from duplicate assets in the drawable folder: fails with the error “Duplicate file”<br>To make it work, before running gradlew assembleRelease delete all images from</p>
+</blockquote>
+<blockquote>
+<p>‘android/app/src/main/res/drawable-mdpi’<br>‘android/app/src/main/res/drawable-hdpi’<br>‘android/app/src/main/res/drawable-xhdpi’<br>‘android/app/src/main/res/drawable-xxhdpi’<br>‘android/app/src/main/res/drawable-xxxhdpi’<br>Or, generate signed APKs using android studio. That works as well for some reason.</p>
+</blockquote>
+<p>参考 <a href="https://github.com/react-navigation/react-navigation/issues/1976#issuecomment-340493501" target="_blank" rel="noopener">xxx uncompiled PNG file passed as argument. Must be compiled first into .flat file</a>. </p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>目前没有系统的去学安卓，只能边做边学了，在这里记录一下。</p>
 <p>每次升级还是会有很多问题的，只能慢慢摸索。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://blog.csdn.net/guolin_blog/article/details/51271369" target="_blank" rel="noopener">Instant Run</a></p>
+<p><a href="https://github.com/react-navigation/react-navigation/issues/1976#issuecomment-340493501" target="_blank" rel="noopener">xxx uncompiled PNG file passed as argument. Must be compiled first into .flat file</a></p>
 
           
         
