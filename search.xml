@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[领证之后]]></title>
+    <url>%2F2018%2F04%2F17%2F%E6%88%91%E7%BB%93%E5%A9%9A%E4%BA%86%2F</url>
+    <content type="text"><![CDATA[不知不觉，快27了，家里人都说我27了，每当听到这些，我会立马笑着反驳，几个月的孩子也没说他一岁啊，其实只是自己欺骗自己，不想长大罢了，哈哈。 真的，恍如昨日，领证后这些天，总觉得有些奇怪，脑子里总是定格在和女友认识的那一天。那天也没正面交流过几句，后面各自加了QQ（那时还是QQ流行的时代），也是奇怪，当面没怎么聊，反而QQ上撩的多，打住。 当时没想过在大学找女朋友，说实话，腻了，毕竟小学初中都有，只是高中有3年空档期，久而久之，觉得一个人有意思一些。可老天是残酷的，多年的冷静与沉稳，在那一刻，被“哼不啦唧（她的QQ昵称）”惊艳，以至于人设崩塌。 上班了，持续更新中…]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>感悟，娱乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[升级 Android Studio 3.1.1 出现的问题]]></title>
+    <url>%2F2018%2F04%2F17%2Fandroid3-1-1-update%2F</url>
+    <content type="text"><![CDATA[最近因为业务需要，被公司要求做安卓，在一个老项目上改，天啊，一窍不通… 这几天都是和 Android Studio 博弈，各种错，各种搜，眼睛都快瞎了。 outputFileName这不今天手残点了升级，又被困了半天， 1Absolute path are not supported when setting an output file name 搜了一下发现是 outputFileName 路径问题，升级了不支持绝对路径！！ 以前代码是这样的， 1outputFileName = new File(outputFile.parent, fileName) 去掉绝对路径，直接定义你的包名， 1outputFileName=&quot; $&#123;variant.applicationId&#125;- $&#123; buildType.name&#125;- $&#123;defaultConfig.versionName&#125;-$&#123; defaultConfig.versionCode &#125;-$&#123;releaseTime() &#125;.apk&quot; Execution failed for task “:app:transformClassesWithInstantRunForDebug”Preferences-&gt;Built,Execution,Deployment-&gt;Instant Run 取消勾选 Enable Instant Run to hot swap code/resource changes on deploy(default enabled) 关于 Instant Run 可以参考这篇文章。 android.enableAapt2123The option &apos;android.enableAapt2&apos; is deprecated and should not be used anymore.Use &apos;android.enableAapt2=true&apos; to remove this warning.It will be removed at the end of 2018 去掉 gradle.properties 中的 1android.enableAapt2=false 但是打包又会报错，uncompiled PNG file。 uncompiled PNG file passed as argument报错： /Users/Ivan/Desktop/zixun/android/app/build/intermediates/res/merged/release/drawable-xhdpi/app_view_imgs_financial_name.png: error: uncompiled PNG file passed as argument. Must be compiled first into .flat file..error: failed parsing overlays. Task :app:processReleaseResources FAILEDFAILURE: Build failed with an exception. github上的issue: This is what I discovered: Only happens for release builds.This issues seems to stem from duplicate assets in the drawable folder: fails with the error “Duplicate file”To make it work, before running gradlew assembleRelease delete all images from ‘android/app/src/main/res/drawable-mdpi’‘android/app/src/main/res/drawable-hdpi’‘android/app/src/main/res/drawable-xhdpi’‘android/app/src/main/res/drawable-xxhdpi’‘android/app/src/main/res/drawable-xxxhdpi’Or, generate signed APKs using android studio. That works as well for some reason. 参考 xxx uncompiled PNG file passed as argument. Must be compiled first into .flat file. 总结目前没有系统的去学安卓，只能边做边学了，在这里记录一下。 每次升级还是会有很多问题的，只能慢慢摸索。 ReferenceInstant Run xxx uncompiled PNG file passed as argument. Must be compiled first into .flat file]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>AndroidStudio</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[开篇]]></title>
+    <url>%2F2018%2F04%2F09%2F%E5%BC%80%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[最近很多商家都在搞试吃活动，这样的试吃活动多来几次… 有蛋糕店、披萨店、水果店，甚至还有房地产的。 不过房地产推销的下午茶真是很差，一车一车的拖过来，都是买来的，水果也不好吃，都没味儿，据我观察，买房的还是有人参与，至少领导们关注了一波，其他商家的好像就是关注个微信，后续也没什么人买了，至少我没有，哈哈。 闲扯一下，开篇。]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>感悟，娱乐</tag>
+      </tags>
+  </entry>
+</search>
