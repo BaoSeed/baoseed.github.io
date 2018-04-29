@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="自从搞了 React Native 后，身体是一天不如一天…">
+<meta name="description" content="自从搞了 React Native 后，身体是一天不如一天… 每天都有各种让人摸不着头脑的问题，有些东西真的不适应，很烦。  导入类，太生硬了； 样式设置，字符串常量。。。 设置个图片，麻烦； 页面上改个东西，设置 state ，还要重新渲染一遍…..  今天就被命名空间搞死，在不同文件夹下可以创建相同文件，这在iOS开发中不允许的。有时候手一抖，倒入了另外一个路径下的同名文件，然后就听天由命了…">
 <meta name="keywords" content="react-native错误">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react-native 命名空间 导致的错误">
 <meta property="og:url" content="http://zp13.top/2018/04/27/react-native-namespace/index.html">
 <meta property="og:site_name" content="爆seed的小仓库">
-<meta property="og:description" content="自从搞了 React Native 后，身体是一天不如一天…">
+<meta property="og:description" content="自从搞了 React Native 后，身体是一天不如一天… 每天都有各种让人摸不着头脑的问题，有些东西真的不适应，很烦。  导入类，太生硬了； 样式设置，字符串常量。。。 设置个图片，麻烦； 页面上改个东西，设置 state ，还要重新渲染一遍…..  今天就被命名空间搞死，在不同文件夹下可以创建相同文件，这在iOS开发中不允许的。有时候手一抖，倒入了另外一个路径下的同名文件，然后就听天由命了…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-27T05:54:47.532Z">
+<meta property="og:updated_time" content="2018-04-29T15:11:37.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-native 命名空间 导致的错误">
-<meta name="twitter:description" content="自从搞了 React Native 后，身体是一天不如一天…">
+<meta name="twitter:description" content="自从搞了 React Native 后，身体是一天不如一天… 每天都有各种让人摸不着头脑的问题，有些东西真的不适应，很烦。  导入类，太生硬了； 样式设置，字符串常量。。。 设置个图片，麻烦； 页面上改个东西，设置 state ，还要重新渲染一遍…..  今天就被命名空间搞死，在不同文件夹下可以创建相同文件，这在iOS开发中不允许的。有时候手一抖，倒入了另外一个路径下的同名文件，然后就听天由命了…">
 
 
 
@@ -388,6 +388,16 @@
 
       
         <p>自从搞了 React Native 后，身体是一天不如一天…</p>
+<p>每天都有各种让人摸不着头脑的问题，有些东西真的不适应，很烦。</p>
+<ul>
+<li>导入类，太生硬了；</li>
+<li>样式设置，字符串常量。。。</li>
+<li>设置个图片，麻烦；</li>
+<li>页面上改个东西，设置 state ，还要重新渲染一遍<br>…..</li>
+</ul>
+<p>今天就被命名空间搞死，在不同文件夹下可以创建相同文件，这在iOS开发中不允许的。有时候手一抖，倒入了另外一个路径下的同名文件，然后就听天由命了…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//Route.APPOINMENT_ALL 等于 10</span><br><span class="line">//number 死活 为 undefined</span><br><span class="line">//Routes 文件倒入错了。。。</span><br><span class="line">const number = Routes.APPOINMENT_ALL;</span><br><span class="line">if(this.state.filter == number)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>整个人都不好了。</p>
 
       
     </div>

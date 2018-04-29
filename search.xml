@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[react-native 命名空间 导致的错误]]></title>
     <url>%2F2018%2F04%2F27%2Freact-native-namespace%2F</url>
-    <content type="text"><![CDATA[自从搞了 React Native 后，身体是一天不如一天…]]></content>
+    <content type="text"><![CDATA[自从搞了 React Native 后，身体是一天不如一天… 每天都有各种让人摸不着头脑的问题，有些东西真的不适应，很烦。 导入类，太生硬了； 样式设置，字符串常量。。。 设置个图片，麻烦； 页面上改个东西，设置 state ，还要重新渲染一遍….. 今天就被命名空间搞死，在不同文件夹下可以创建相同文件，这在iOS开发中不允许的。有时候手一抖，倒入了另外一个路径下的同名文件，然后就听天由命了… 1234567//Route.APPOINMENT_ALL 等于 10//number 死活 为 undefined//Routes 文件倒入错了。。。const number = Routes.APPOINMENT_ALL;if(this.state.filter == number)&#123;&#125; 整个人都不好了。]]></content>
       <categories>
         <category>React Native</category>
       </categories>
