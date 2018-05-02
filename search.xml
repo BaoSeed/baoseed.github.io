@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[global 全局变量]]></title>
+    <url>%2F2018%2F05%2F02%2Fglobal%2F</url>
+    <content type="text"><![CDATA[在 React-Native 中想要引用全局变量非常简单，用global就行。 新建 Global.js 文件（随便命名都行），在里面放入你想要的全局变量即可。 123456789101112131415161718192021222324/** * @description 所有的全局变量在这里引入 */&apos;use strict&apos;;import Base from &apos;./../view/styles/Base&apos;;import AppInfo from &apos;./../config/AppInfo&apos;;import Routes from &apos;./../constants/Routes&apos;;var &#123; rem &#125; = Base;var LOCAL_USER_BASE_INFO = &#123;&#125;;var LOCAL_USER_INFO = &#123;&#125;;//别直接赋值 global = &#123;....&#125;Object.assign(global,&#123; Base, Routes, AppInfo, rem, LOCAL_USER_BASE_INFO, LOCAL_USER_INFO&#125;); 然后在入口文件中，倒入新建的 Global.js 文件，不一定非要直接导入，在 index.js 入口文件中能 找到 Global 就行。 在项目的任何文件中引用全局变量， 1global.LOCAL_USER_INFO = userProfile;]]></content>
+      <categories>
+        <category>React Native</category>
+      </categories>
+      <tags>
+        <tag>react-native 基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[react-native 命名空间 导致的错误]]></title>
     <url>%2F2018%2F04%2F27%2Freact-native-namespace%2F</url>
     <content type="text"><![CDATA[自从搞了 React Native 后，身体是一天不如一天… 每天都有各种让人摸不着头脑的问题，有些东西真的不适应，很烦。 导入类，太生硬了； 样式设置，字符串常量。。。 设置个图片，麻烦； 页面上改个东西，设置 state ，还要重新渲染一遍….. 今天就被命名空间搞死，在不同文件夹下可以创建相同文件，这在iOS开发中不允许的。有时候手一抖，倒入了另外一个路径下的同名文件，然后就听天由命了… 1234567//Route.APPOINMENT_ALL 等于 10//number 死活 为 undefined//Routes 文件倒入错了。。。const number = Routes.APPOINMENT_ALL;if(this.state.filter == number)&#123;&#125; 整个人都不好了。]]></content>
