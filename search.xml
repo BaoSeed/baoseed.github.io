@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[global 全局变量]]></title>
+    <title><![CDATA[React-Native global 全局变量]]></title>
     <url>%2F2018%2F05%2F02%2Fglobal%2F</url>
     <content type="text"><![CDATA[在 React-Native 中想要引用全局变量非常简单，用global就行。 新建 Global.js 文件（随便命名都行），在里面放入你想要的全局变量即可。 123456789101112131415161718192021222324/** * @description 所有的全局变量在这里引入 */&apos;use strict&apos;;import Base from &apos;./../view/styles/Base&apos;;import AppInfo from &apos;./../config/AppInfo&apos;;import Routes from &apos;./../constants/Routes&apos;;var &#123; rem &#125; = Base;var LOCAL_USER_BASE_INFO = &#123;&#125;;var LOCAL_USER_INFO = &#123;&#125;;//别直接赋值 global = &#123;....&#125;Object.assign(global,&#123; Base, Routes, AppInfo, rem, LOCAL_USER_BASE_INFO, LOCAL_USER_INFO&#125;); 然后在入口文件中，倒入新建的 Global.js 文件，不一定非要直接导入，在 index.js 入口文件中能 找到 Global 就行。 在项目的任何文件中引用全局变量， 1global.LOCAL_USER_INFO = userProfile;]]></content>
       <categories>
