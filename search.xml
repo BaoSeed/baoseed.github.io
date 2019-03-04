@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[render 中 boolean操作 导致的错误]]></title>
+    <url>%2F2018%2F05%2F04%2Fboolean-in-render%2F</url>
+    <content type="text"><![CDATA[RawText “0” must be wrapped in an explicit component.]]></content>
+      <categories>
+        <category>React Native</category>
+      </categories>
+      <tags>
+        <tag>react-native错误</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[React-Native global 全局变量]]></title>
     <url>%2F2018%2F05%2F02%2Fglobal%2F</url>
     <content type="text"><![CDATA[在 React-Native 中想要引用全局变量非常简单，用global就行。 新建 Global.js 文件（随便命名都行），在里面放入你想要的全局变量即可。 123456789101112131415161718192021222324/** * @description 所有的全局变量在这里引入 */&apos;use strict&apos;;import Base from &apos;./../view/styles/Base&apos;;import AppInfo from &apos;./../config/AppInfo&apos;;import Routes from &apos;./../constants/Routes&apos;;var &#123; rem &#125; = Base;var LOCAL_USER_BASE_INFO = &#123;&#125;;var LOCAL_USER_INFO = &#123;&#125;;//别直接赋值 global = &#123;....&#125;Object.assign(global,&#123; Base, Routes, AppInfo, rem, LOCAL_USER_BASE_INFO, LOCAL_USER_INFO&#125;); 然后在入口文件中，倒入新建的 Global.js 文件，不一定非要直接导入，在 index.js 入口文件中能 找到 Global 就行。 在项目的任何文件中引用全局变量， 1global.LOCAL_USER_INFO = userProfile;]]></content>
@@ -25,7 +36,7 @@
   <entry>
     <title><![CDATA[领证之后]]></title>
     <url>%2F2018%2F04%2F17%2F%E6%88%91%E7%BB%93%E5%A9%9A%E4%BA%86%2F</url>
-    <content type="text"><![CDATA[不知不觉，快27了，家里人都说我27了，每当听到这些，我会立马笑着反驳，几个月的孩子也没说他一岁啊，其实只是自己欺骗自己，不想长大罢了，哈哈。 真的，恍如昨日，领证后这些天，总觉得有些奇怪，脑子里总是定格在和女友认识的那一天。那天也没正面交流过几句，后面各自加了QQ（那时还是QQ流行的时代），也是奇怪，当面没怎么聊，反而QQ上撩的多，打住。 当时没想过在大学找女朋友，说实话，腻了，毕竟小学初中都有，只是高中有3年空档期，久而久之，觉得一个人有意思一些。可老天是残酷的，多年的冷静与沉稳，在那一刻，被“哼不啦唧（她的QQ昵称）”惊艳，以至于人设崩塌。 上班了，持续更新中…]]></content>
+    <content type="text"><![CDATA[不知不觉，快27了，家里人都说我27了，每当听到这些，我会立马笑着反驳，几个月的孩子也没说他一岁啊，其实只是自己欺骗自己，不想长大罢了，哈哈。 真的，恍如昨日，领证后这些天，总觉得有些奇怪，脑子里总是定格在和女友认识的那一天。那天也没正面交流过几句，后面各自加了QQ（那时还是QQ流行的时代），也是奇怪，当面没怎么聊，反而QQ上撩的多，打住。 当时没想过在大学找女朋友，说实话，腻了，毕竟小学初中都有，只是高中有3年空档期，久而久之，觉得一个人有意思一些。可老天是残酷的，多年的冷静与沉稳，在那一刻，被“哼不啦唧”（她的QQ昵称）惊艳，以至于人设崩塌。 上班了，持续更新中…]]></content>
       <categories>
         <category>生活</category>
       </categories>
